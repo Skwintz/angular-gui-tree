@@ -1,0 +1,16 @@
+<div>
+    <script type="text/ng-template"  id="tree_item_renderer.html">
+        <span ng-init="show=false" ng-click="show = !show; $parent.$emit('remove'); $event.stopPropagation();" ng-class="{'selected': data.selected}" class="gui-tree-item">
+            {{data.name}}
+            <ul ng-show="show">
+                <li ng-repeat="data in data.children" ng-include="'tree_item_renderer.html'" class="gui-tree-item"  ></li>
+            </ul>
+        </span>
+    </script>
+
+    <ul>
+        <span>
+            <li ng-repeat="data in data" ng-include="'tree_item_renderer.html'" ></li>
+        </span>
+    </ul>
+</div>

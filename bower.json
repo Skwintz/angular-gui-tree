@@ -1,0 +1,14 @@
+{
+  "name": "gui-tree",
+  "version": "0.0.1",
+  "main": "gui-tree.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "angular": "latest",
+    "angular-sanitize": "latest"
+  }
+}
